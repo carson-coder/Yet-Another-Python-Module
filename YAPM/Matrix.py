@@ -12,11 +12,11 @@ from . import Random
 class Matrix(): # 2d matrix
     def __init__(self, MatrixValues: Sequence[Sequence[int]]):
         if not Random.RaisesError("Matrix[0][0]", GlobalVars = {"Matrix": MatrixValues})[0]:
-            raise ValueError("Matrix Values needs to be a Sequence[Sequence[int] (list[list[int]])")
+            raise ValueError("Matrix has to be a Sequence[Sequence[int] or 2d int list [[int]]")
         self.matrix = MatrixValues
     def __mul__(self, other):
-        if not (Random.RaisesError("Matrix.matrix", GlobalVars = {"Matrix": other})[0] and len(self.matrix[0]) == len(other.matrix)):
-            raise ValueError("X size of first matrix has to match Y value of second matrix. Or you arn't multiplying a matrix by a matrix or class that inheirts a matrix")
+        if not (Random.RaisesError("Matrix.matrix[0][0]", GlobalVars = {"Matrix": other})[0] and len(self.matrix[0]) == len(other.matrix)):
+            raise ValueError("X length of first matrix has to match Y length of second matrix. Or you arn't multiplying a matrix by a matrix or a class that has a matrix property that is a 2x2 list")
         
         MatrixValues = [[0]*len(other.matrix[0])]*len(other.matrix)
         
@@ -30,3 +30,5 @@ class Matrix(): # 2d matrix
             print(values)
             
         return (Matrix(MatrixValues))
+
+   
