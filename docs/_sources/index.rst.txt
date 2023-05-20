@@ -15,7 +15,7 @@ Welcome to YAPM's documentation!
 .. automodule:: YAPM.Matrix
    :members:
 
-.. automodule:: YAPM.Random
+.. automodule:: YAPM.Other
    :members:
 
 

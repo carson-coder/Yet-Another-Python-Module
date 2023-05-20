@@ -147,7 +147,7 @@
 <dd><p>Creates A Matrix that can be used for many different math uses.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>MatrixValues</strong> – Sequence[Sequence[int]] - The values for the matrix (indexs y then x. like MatrixValues[y][x])</p>
+<dd class="field-odd"><p><strong>MatrixValues</strong> – Sequence[Sequence[int]] - The values for the matrix (indexs y then x.)</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ValueError</strong> – MatrixValues isn’t a 2d int list</p>
@@ -155,37 +155,7 @@
 </dl>
 </dd></dl>
 
-<span class="target" id="module-YAPM.Random"></span><dl class="py function">
-<dt class="sig sig-object py" id="YAPM.Random.RaisesError">
-<span class="sig-prename descclassname"><span class="pre">YAPM.Random.</span></span><span class="sig-name descname"><span class="pre">RaisesError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ignore</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[None]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GlobalVars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#YAPM.Random.RaisesError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates the code provited.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>code</strong> (<em>str</em>) – str - The code to eval</p></li>
-<li><p><strong>Ignore</strong> (<em>Sequence</em><em>[</em><em>Exception</em><em>]</em>) – Exceptions to ignore</p></li>
-<li><p><strong>GlobalVars</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>any</em><em>]</em>) – Globals to pass into the eval function</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>Tuple[True, any] - Code ran without any errors. returns code result.</p></li>
-<li><p>Tuple[True, Exception] - Code threw a error that is in the Ignored exceptions list</p></li>
-<li><p>Tuple[False, Exception] - Code threw a error that is not Ignored.</p></li>
-</ul>
-</p>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p>ValueError - Ignore isn’t a iterable</p></li>
-<li><p>ValueError - GlobalVars isn’t a dict</p></li>
-<li><p>ValueError - Code isn’t a string</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
+<span class="target" id="module-YAPM.Other"></span></section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
