@@ -4,10 +4,11 @@ from collections.abc import Sequence
 # Random Stuff
 #
 
-def RaisesError(code: str, Ignore: Sequence[Exception] = [None,], GlobalVars: dict[str, any] = {}):
+
+def RaisesError(code: str, Ignore: Sequence[Exception] = [], GlobalVars: dict[str, any] = {}):
     """
     Evaluates the code provited.
-    
+
     :param str code: str - The code to eval
     :param Sequence[Exception] Ignore: Exceptions to ignore
     :param dict[str, any] GlobalVars: Globals to pass into the eval function
@@ -15,24 +16,24 @@ def RaisesError(code: str, Ignore: Sequence[Exception] = [None,], GlobalVars: di
     :returns:
         - Tuple[True, any] - Code ran without any errors. returns code result.
         - Tuple[True, Exception] - Code threw a error that is in the Ignored exceptions list
-        - Tuple[False, Exception] - Code threw a error that is not Ignored. 
-    
+        - Tuple[False, Exception] - Code threw a error that is not Ignored.'
+
     :raises:
         - ValueError - Ignore isn't a iterable
         - ValueError - GlobalVars isn't a dict
         - ValueError - Code isn't a string
     """
-    try: 
+    try:
         iter(Ignore)
-    except ValueError: 
+    except ValueError:
         raise ValueError("Ignore Should be an iterable")
-    try: 
+    try:
         dict(GlobalVars)
-    except ValueError: 
+    except ValueError:
         raise ValueError("GlobalVars Should be an dict")
     if not isinstance(code, str):
         raise ValueError("Code needs to be a string or isinstance(code, str) should return true")
-    
+
     try:
         Value = eval(compile(code, '<string>', 'eval'), GlobalVars)
     except Exception as e:
@@ -40,5 +41,5 @@ def RaisesError(code: str, Ignore: Sequence[Exception] = [None,], GlobalVars: di
             return (True, e)
         else:
             return (False, e)
-    
+
     return (True, Value)
