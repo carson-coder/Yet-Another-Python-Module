@@ -1,6 +1,6 @@
 from distutils.core import setup
 import json
-data = json.load(open('./YAPM/config.json'))
+data = json.load(open('./config.json'))
 setup(
   name='YetAnotherModule',
   version=f"{data['version']}",
