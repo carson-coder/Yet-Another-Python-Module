@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Examples &#8212; YAPM  documentation</title>
+    <title>Getting Started &#8212; YAPM  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=0.7.0-1" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -16,8 +16,7 @@
     <script src="_static/js/theme.js"></script>
     <script src="_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="YAPM.Other" href="random.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head><body data-dark_mode_code_blocks="true">
 
 <div id="top_nav">
@@ -120,9 +119,9 @@
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="yapm.html">YAPM</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 
         </div>
@@ -134,73 +133,23 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="examples">
-<span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<p>Code Examples</p>
-<hr class="docutils" />
-<section id="matrix">
-<h2>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h2>
-<section id="multiplying-matrices">
-<h3>Multiplying Matrices<a class="headerlink" href="#multiplying-matrices" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Create and multiply two matrices</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">YAPM</span> <span class="kn">import</span> <span class="n">Matrix</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="n">Matrix</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span>
-  <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
-<span class="p">)</span>
-
-<span class="n">b</span> <span class="o">=</span> <span class="n">Matrix</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span>
-  <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
-<span class="p">)</span>
-
-<span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">))</span> <span class="c1"># [[26, 12], [56, 18]]</span>
-</pre></div>
-</div>
-</div>
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<section id="installing-from-pip">
+<h2>Installing From Pip<a class="headerlink" href="#installing-from-pip" title="Permalink to this headline">¶</a></h2>
+<p>To install from pip run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">YetAnotherModule</span></code></p>
 </section>
-<section id="get-value-from-matrix">
-<h3>Get Value From Matrix<a class="headerlink" href="#get-value-from-matrix" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Get value from matrix at 2, 0</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">YAPM</span> <span class="kn">import</span> <span class="n">Matrix</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="n">Matrix</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span>
-  <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
-<span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># 3</span>
-</pre></div>
-</div>
-</div>
+<section id="installing-from-github">
+<h2>Installing From Github<a class="headerlink" href="#installing-from-github" title="Permalink to this headline">¶</a></h2>
+<p>To install from github (Latest) run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/carson-coder/Yet-Another-Python-Module.git</span></code></p>
 </section>
+<section id="importing">
+<h2>Importing<a class="headerlink" href="#importing" title="Permalink to this headline">¶</a></h2>
+<p>You can import Yet Another Python Module into your script with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">YAPM</span></code></p>
 </section>
-<hr class="docutils" />
-<section id="others">
-<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
-<section id="raiseserror">
-<h3>RaisesError<a class="headerlink" href="#raiseserror" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Try to get value from list and print if errored</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">YAPM</span> <span class="kn">import</span> <span class="n">Other</span>
-
-<span class="k">def</span> <span class="nf">is_list</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-  <span class="n">result</span> <span class="o">=</span> <span class="n">Other</span><span class="o">.</span><span class="n">RaisesError</span><span class="p">(</span><span class="s2">&quot;a[0]&quot;</span><span class="p">,</span> <span class="n">GlobalVars</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">})</span>
-  <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[0] is </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Result[1] is the return value</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[0] threw </span><span class="si">{</span><span class="n">retult</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Result[1] is the error.</span>
-
-<span class="n">is_list</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>  <span class="c1"># a[0] is 0</span>
-<span class="n">is_list</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># a[0] threw ValueError</span>
-</pre></div>
-</div>
-</div>
-</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>You can find examples in <a class="reference internal" href="examples.html#examples"><span class="std std-ref">Examples</span></a>.</p>
 </section>
 </section>
 
@@ -218,16 +167,11 @@
             <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:<span></a></p>
             <div class="page_toc">
                 <ul>
-<li><a class="reference internal" href="#">Examples</a><ul>
-<li><a class="reference internal" href="#matrix">Matrix</a><ul>
-<li><a class="reference internal" href="#multiplying-matrices">Multiplying Matrices</a></li>
-<li><a class="reference internal" href="#get-value-from-matrix">Get Value From Matrix</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#others">Others</a><ul>
-<li><a class="reference internal" href="#raiseserror">RaisesError</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#installing-from-pip">Installing From Pip</a></li>
+<li><a class="reference internal" href="#installing-from-github">Installing From Github</a></li>
+<li><a class="reference internal" href="#importing">Importing</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -241,9 +185,6 @@
     <div class="button_nav_wrapper">
         <div class="button_nav">
             <div class="left">
-                
-                <a href="random.html">
-                    <span class="icon">&lt;</span><span>YAPM.Other</span></a>
                 
             </div>
 

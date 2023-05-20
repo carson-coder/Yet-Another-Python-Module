@@ -10,6 +10,7 @@ Welcome to YAPM's documentation!
    :maxdepth: 1
    :caption: Contents:
 
+   ./start.rst
    ./yapm.rst
    ./examples.rst
 
