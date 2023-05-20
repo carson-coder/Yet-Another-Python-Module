@@ -17,7 +17,7 @@
     <script src="_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to YAPM’s documentation!" href="index.html" /> 
+    <link rel="prev" title="YAPM.Other" href="random.html" /> 
   </head><body data-dark_mode_code_blocks="true">
 
 <div id="top_nav">
@@ -121,6 +121,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="yapm.html">YAPM</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a></li>
 </ul>
 
@@ -164,6 +165,25 @@
 </dd>
 </dl>
 </section>
+<section id="get-value-from-matrix">
+<h3>Get Value From Matrix<a class="headerlink" href="#get-value-from-matrix" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Get value from matrix at 2, 0</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">YAPM</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">YAPM</span><span class="o">.</span><span class="n">Matrix</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span>
+  <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<dl class="simple">
+<dt>Prints</dt><dd><p>3</p>
+</dd>
+</dl>
+</section>
 </section>
 </section>
 
@@ -184,6 +204,7 @@
 <li><a class="reference internal" href="#">Examples</a><ul>
 <li><a class="reference internal" href="#matrix">Matrix</a><ul>
 <li><a class="reference internal" href="#multiplying-matrices">Multiplying Matrices</a></li>
+<li><a class="reference internal" href="#get-value-from-matrix">Get Value From Matrix</a></li>
 </ul>
 </li>
 </ul>
@@ -200,8 +221,8 @@
         <div class="button_nav">
             <div class="left">
                 
-                <a href="index.html">
-                    <span class="icon">&lt;</span><span>Welcome to YAPM’s documentation!</span></a>
+                <a href="random.html">
+                    <span class="icon">&lt;</span><span>YAPM.Other</span></a>
                 
             </div>
 

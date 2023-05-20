@@ -1,2 +1,1 @@
-sphinx-build source/ docs/
-cp source/ docs/source/ -r
+sphinx-build docsSource/ docs/

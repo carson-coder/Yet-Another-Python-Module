@@ -30,3 +30,20 @@ Multiplying Matrices
 
 Prints
   [[26, 12], [56, 18]]
+
+Get Value From Matrix
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+  :caption: Get value from matrix at 2, 0
+
+  import YAPM
+  a = YAPM.Matrix.Matrix(
+    [[1, 2, 3],
+    [4, 2, 4]]
+  ) 
+
+  print(a.GetValue(2, 0)
+
+Prints
+  3

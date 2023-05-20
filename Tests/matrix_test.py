@@ -26,3 +26,11 @@ class Tests():
 
         assert (a * b).matrix == [[26, 12],
                                   [56, 18]]
+
+    def test_two(self):
+        a = YAPM.Matrix.Matrix(
+            [[1, 2, 3],
+             [4, 2, 4]]
+        )
+
+        assert a.GetValue(2, 0) == 3

@@ -10,14 +10,8 @@ Welcome to YAPM's documentation!
    :maxdepth: 1
    :caption: Contents:
 
+   ./yapm.rst
    ./examples.rst
-
-.. automodule:: YAPM.Matrix
-   :members:
-
-.. automodule:: YAPM.Other
-   :members:
-
 
 Indices and tables
 ==================
