@@ -11,5 +11,5 @@ setup(
   license="LICENSE",
   long_description=open('README.md').read(),
   packages=['YAPM'],
-  py_modules=['collections.abc',]
+  py_modules=[]
 )
