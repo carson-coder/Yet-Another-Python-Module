@@ -14,7 +14,7 @@ Make sure that your contribution
 Run `pip install YetAnotherModule` to download from pip
 
 ### Importing
-`import YAPM
+```import YAPM
 a = YAPM.Matrix.Matrix(
   [[1, 2, 3],
    [4, 2, 4]]
@@ -25,7 +25,7 @@ b = YAPM.Matrix.Matrix(
    [3, 3]]
 
 print((a * b))
-`
+```
 
 ## Licence
 This code is under the MIT licence. You can do whatever you want but I (Carson) am not liabile for anything that is done with this code.
