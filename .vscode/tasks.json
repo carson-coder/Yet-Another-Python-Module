@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "Run Tests",
+        "command": "bash", // Could be any other shell command
+        "args": ["test.sh"],
+        "type": "shell",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        }
+    },
+    {
+        "label": "Build Docs",
+        "command": "bash", // Could be any other shell command
+        "args": ["build.sh"],
+        "type": "shell",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }]
+}

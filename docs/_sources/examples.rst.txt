@@ -63,7 +63,7 @@ RaisesError
     if result[0]:
       print(f"a[0] is {result[1]}")  # Result[1] is the return value
     else:
-      print(f"a[0] threw {retult[1]}")  # Result[1] is the error.
+      print(f"a[0] threw {result[1]}")  # Result[1] is the error.
 
   is_list([0, 1, 2])  # a[0] is 0
-  is_list(1)  # a[0] threw ValueError
+  is_list(1)  # a[0] threw 'int' object is not subscriptable

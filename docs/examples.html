@@ -121,6 +121,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="start.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="yapm.html">YAPM</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a></li>
 </ul>
@@ -193,10 +194,10 @@
   <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[0] is </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Result[1] is the return value</span>
   <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[0] threw </span><span class="si">{</span><span class="n">retult</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Result[1] is the error.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[0] threw </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Result[1] is the error.</span>
 
 <span class="n">is_list</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>  <span class="c1"># a[0] is 0</span>
-<span class="n">is_list</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># a[0] threw ValueError</span>
+<span class="n">is_list</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># a[0] threw &#39;int&#39; object is not subscriptable</span>
 </pre></div>
 </div>
 </div>
