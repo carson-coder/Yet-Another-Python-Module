@@ -10,6 +10,7 @@ setup(
   url='https://github.com/carson-coder/Yet-Another-Python-Module',
   license="LICENSE",
   long_description=open('README.md').read(),
+  long_description_content_type="text/markdown",
   packages=['YAPM'],
   py_modules=[]
 )
