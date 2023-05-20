@@ -14,7 +14,8 @@ Make sure that your contribution
 Run `pip install YetAnotherModule` to download from pip
 
 ### Importing
-```import YAPM
+```python
+import YAPM
 a = YAPM.Matrix.Matrix(
   [[1, 2, 3],
    [4, 2, 4]]
