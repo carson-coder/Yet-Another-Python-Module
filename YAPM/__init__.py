@@ -3,4 +3,5 @@ from . import Random as Other
 
 __all__ = [
     "Matrix",
-    "Other"]
+    "Other"
+]
