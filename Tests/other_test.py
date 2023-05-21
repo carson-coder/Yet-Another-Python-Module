@@ -20,9 +20,9 @@ class Tests():
         def is_list(a):
             result = Other.RaisesError("a[0]", GlobalVars={"a": a})
             if result[0]:
-                return(f"a[0] is {result[1]}")  # Result[1] is the return value
+                return f"a[0] is {result[1]}"  # Result[1] is the return value
             else:
-                return(f"a[0] threw {result[1]}")  # Result[1] is the error.
+                return f"a[0] threw {result[1]}"  # Result[1] is the error.
 
         assert is_list([0, 1, 2]) == "a[0] is 0"
         assert is_list(1) == "a[0] threw 'int' object is not subscriptable"
