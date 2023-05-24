@@ -21,21 +21,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run script file
-      run: |
-         chmod +x ./build.sh
-         ./build.sh
-      shell: bash
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: Install doc deps
+        run: |
+           chmod +x ./install.sh
+           ./install.sh
+        shell: bash
+      - name: Build Docs
+        run: |
+           chmod +x ./build.sh
+           ./build.sh
+        shell: bash
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
