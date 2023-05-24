@@ -3,6 +3,14 @@ A module where I put random stuff. Feel free to update, add, or optimize stuff j
 
 Works with python 3.10>=
 
+## Versions
+w.x.y.z
+
+w is the amount of big updates
+x is the amount of middle updates
+y is the amount of smaller updates
+z is the amount of smallest updates. Like big fixes.
+
 ## Contributing
 If you want to contribue fork this repo and make a pull request.
 Make sure that your contribution
