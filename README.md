@@ -4,7 +4,7 @@ A module where I put random stuff. Feel free to update, add, or optimize stuff j
 Works with python 3.10>=
 
 ## Versions
-w.x.y.z
+versions go by w.x.y.z
 
 w is the amount of big updates
 x is the amount of middle updates
