@@ -3,5 +3,5 @@ YAPM
 
 .. toctree::
     ./matrix.rst
-    ./random.rst
     ./terminal.rst
+    ./random.rst
