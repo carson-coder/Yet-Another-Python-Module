@@ -1,6 +1,8 @@
 ## Yet Another Python Module (YAPM)
 A module where I put random stuff. Feel free to update, add, or optimize stuff just keep the syntax the same.
 
+Works with python 3.10>=
+
 ## Contributing
 If you want to contribue fork this repo and make a pull request.
 Make sure that your contribution
