@@ -48,8 +48,28 @@ Get Value From Matrix
 
 -------------------------------------------------------------------------------
 
-Others
-------
+Terminal
+--------
+
+Terminal
+~~~~~~~~
+.. code-block:: python
+  :caption: Print funky text
+
+  from YAPM import Terminal
+
+  t = Terminal.Terminal(TrueColor=True)  # Indicate we have true color
+
+  t.print((0, 255, 0), (23, 60, 162), "Test")  # Print "Test" with a blue background and green text
+
+.. image:: ./Terminal_Example.png
+  :width: 50
+  :alt: Green "Test" with blue background
+
+-------------------------------------------------------------------------------
+
+Other Functions
+---------------
 
 RaisesError
 ~~~~~~~~~~~

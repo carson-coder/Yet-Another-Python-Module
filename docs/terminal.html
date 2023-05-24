@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>YAPM.Matrix &#8212; YAPM  documentation</title>
+    <title>YAPM.Terminal &#8212; YAPM  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=0.7.0-1" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -15,8 +15,8 @@
     <script src="_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="YAPM.Other" href="random.html" />
-    <link rel="prev" title="YAPM" href="yapm.html" /> 
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="YAPM.Other" href="random.html" /> 
   </head><body data-dark_mode_code_blocks="true">
 
 <div id="top_nav">
@@ -122,13 +122,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="start.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="yapm.html">YAPM</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">YAPM.Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html">YAPM.Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="random.html">YAPM.Other</a></li>
-<li class="toctree-l2"><a class="reference internal" href="terminal.html">YAPM.Terminal</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">YAPM.Terminal</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminal.html">YAPM.Terminal</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">YAPM.Terminal</a></li>
 </ul>
 
         </div>
@@ -140,37 +140,40 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="yapm-matrix">
-<h1>YAPM.Matrix<a class="headerlink" href="#yapm-matrix" title="Permalink to this heading">¶</a></h1>
-<p>Adds a math matrix.</p>
-<span class="target" id="module-YAPM.Matrix"></span><dl class="py class">
-<dt class="sig sig-object py" id="YAPM.Matrix.Matrix">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">YAPM.Matrix.</span></span><span class="sig-name descname"><span class="pre">Matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MatrixValues</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#YAPM.Matrix.Matrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates A Matrix that can be used for many different math uses.</p>
+  <section id="yapm-terminal">
+<h1>YAPM.Terminal<a class="headerlink" href="#yapm-terminal" title="Permalink to this heading">¶</a></h1>
+<p>Add many things for Terminal printing</p>
+<span class="target" id="module-YAPM.Terminal"></span><dl class="py class">
+<dt class="sig sig-object py" id="YAPM.Terminal.Terminal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">YAPM.Terminal.</span></span><span class="sig-name descname"><span class="pre">Terminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TrueColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#YAPM.Terminal.Terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Class for more terminal customisation. Including printing with custom colors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>MatrixValues</strong> (<em>Sequence</em><em>[</em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – The values for the matrix (indexs y then x.)</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – MatrixValues isn’t a 2d int list</p>
+<dd class="field-odd"><p><strong>TrueColor=True</strong> (<em>bool</em>) – Does this terminal support true color</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="YAPM.Matrix.Matrix.GetValue">
-<span class="sig-name descname"><span class="pre">GetValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#YAPM.Matrix.Matrix.GetValue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a value from the matrix at y, x.</p>
+<dt class="sig sig-object py" id="YAPM.Terminal.Terminal.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fore</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">back</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_ansi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_ansi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'\x1b[0m\n'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#YAPM.Terminal.Terminal.print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints text with a given color</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>int</em>) – the x value of the element to get.</p></li>
-<li><p><strong>y</strong> (<em>int</em>) – the y value of the element to get.</p></li>
+<li><p><strong>fore</strong> (<em>Tuple</em><em>[</em><em>int 0-255 * 3</em><em>] </em><em>| </em><em>None</em>) – The foreground of the text. White if None</p></li>
+<li><p><strong>back</strong> (<em>Tuple</em><em>[</em><em>int 0-255 * 3</em><em>] </em><em>| </em><em>None</em>) – The background of the text. Black if None</p></li>
+<li><p><strong>text</strong> (<em>*str</em>) – text to print, seperated by <cite>sep</cite></p></li>
+<li><p><strong>start_ansi</strong> (<em>str</em>) – Ansi codes to add before the text. Goes after the ansi color code. Automaticly adds ESC</p></li>
+<li><p><strong>end_ansi</strong> (<em>str</em>) – Same as <cite>start_ansi</cite> but after the text. before <cite>end</cite></p></li>
+<li><p><strong>&quot;</strong> (<em>str sep=&quot;</em>) – The seperator to add between text</p></li>
+<li><p><strong>end=&quot;RESETn&quot;</strong> (<em>str</em>) – What to add at the end of the text. If changed add reset or text will stay colored</p></li>
+<li><p><strong>**options</strong> (<em>str</em>) – Options for the text. options are Bold, Italic, Strikethrough, Reverse, Underline, or Blinking. Goes before start_ansi.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns int<span class="colon">:</span></dt>
-<dd class="field-even"><p>the value at the y, x cords.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
 </dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ValueError</strong> – the value at y, x doesn’t exist.</p>
+<dt class="field-odd">Rasies ValueError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>One or more of the arguments are the wrong type</p>
 </dd>
 </dl>
 </dd></dl>
@@ -193,9 +196,9 @@
             <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:<span></a></p>
             <div class="page_toc">
                 <ul>
-<li><a class="reference internal" href="#">YAPM.Matrix</a><ul>
-<li><a class="reference internal" href="#YAPM.Matrix.Matrix"><code class="docutils literal notranslate"><span class="pre">Matrix</span></code></a><ul>
-<li><a class="reference internal" href="#YAPM.Matrix.Matrix.GetValue"><code class="docutils literal notranslate"><span class="pre">Matrix.GetValue()</span></code></a></li>
+<li><a class="reference internal" href="#">YAPM.Terminal</a><ul>
+<li><a class="reference internal" href="#YAPM.Terminal.Terminal"><code class="docutils literal notranslate"><span class="pre">Terminal</span></code></a><ul>
+<li><a class="reference internal" href="#YAPM.Terminal.Terminal.print"><code class="docutils literal notranslate"><span class="pre">Terminal.print()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -212,14 +215,14 @@
         <div class="button_nav">
             <div class="left">
                 
-                <a href="yapm.html">
-                    <span class="icon">&lt;</span><span>YAPM</span></a>
+                <a href="random.html">
+                    <span class="icon">&lt;</span><span>YAPM.Other</span></a>
                 
             </div>
 
             <div class="right">
                 
-                    <a href="random.html"><span>YAPM.Other</span><span class="icon">&gt;</span></a>
+                    <a href="examples.html"><span>Examples</span><span class="icon">&gt;</span></a>
                 
             </div>
         </div>
