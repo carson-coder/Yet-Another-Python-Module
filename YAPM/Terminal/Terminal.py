@@ -16,13 +16,31 @@ class Terminal():  # YAPM.Terminal.Terminal
     FORE_TRUE_COLOR = ESC + "[38;2;{};{};{}m"
     BACK_TRUE_COLOR = ESC + "[48;2;{};{};{}m"
 
+    BOLD = ESC + "[1m"
+    ITALIC = ESC + "[3m"
+    UNDERLINE = ESC + "[4m"
+    STRIKETHROUGH = ESC + "[9m"
+
     def __init__(self, TrueColor=True):
         self.TrueColor = TrueColor
 
     def __color__(self, color: tuple, fore: bool):
         return (self.FORE_TRUE_COLOR if fore else self.BACK_TRUE_COLOR).format(*color)
 
-    def print(self, fore: tuple | None = None, back: tuple | None = None, *text, start_ansi: list[str] = [], end_ansi: list[str] = [], sep: str = " ", end: str = "\033[0m\n", **options):
+    def print(
+            self,
+            fore: tuple | None = None,
+            back: tuple | None = None,
+            *text,
+            start_ansi: list[str] = [],
+            end_ansi: list[str] = [],
+            sep: str = " ",
+            end: str = "\033[0m\n",
+            bold: bool = False,
+            italic: bool = False,
+            line: bool = False,
+            strike: bool = False
+    ):
         r"""
         Prints text with a given color
 
@@ -33,7 +51,10 @@ class Terminal():  # YAPM.Terminal.Terminal
         :param str end_ansi: Same as `start_ansi` but after the text. before `end`
         :param str sep=" ": The seperator to add between text
         :param str end="RESET\n": What to add at the end of the text. If changed add reset or text will stay colored
-        :param str \**options: Options for the text. options are Bold, Italic, Strikethrough, Reverse, Underline, or Blinking. Goes before start_ansi.
+        :param bool bold=False: Should the text be bold.
+        :param bool italic=False: Should the text be italic.
+        :param bool line=False: Should the text have a underline.
+        :param bool strike=False: Should the text have a strikethrough.
 
         :returns: None
         :rasies ValueError: One or more of the arguments are the wrong type
@@ -59,7 +80,13 @@ class Terminal():  # YAPM.Terminal.Terminal
         sep = sep[1]
         end = end[1]
 
+        style = ""
+        style += self.BOLD * int(bold)
+        style += self.ITALIC * int(italic)
+        style += self.UNDERLINE * int(line)
+        style += self.STRIKETHROUGH * int(strike)
+
         print_text = sep.join(print_text)
-        print_text = self.__color__(fore, True) + self.__color__(back, False) + self.ESC.join(start_text) + print_text + self.ESC.join(end_text) + end
+        print_text = self.__color__(back, False) + self.__color__(fore, True) + style + self.ESC.join(start_text) + print_text + self.ESC.join(end_text) + end
 
         sys.stdout.write(print_text)
