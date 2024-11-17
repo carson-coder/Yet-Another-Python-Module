@@ -18,9 +18,9 @@ class Matrix():  # 2d matrix
 
     :raises ValueError: MatrixValues isn't a 2d int list
     """
-    def __init__(self, MatrixValues: Sequence[Sequence[int]]):
+    def __init__(self, MatrixValues: Sequence[Sequence[float]]):
         if not Other.RaisesError(
-            "int(Matrix[0][0])",
+            "float(Matrix[0][0])",
             GlobalVars={"Matrix": MatrixValues}
         )[0]:
             raise ValueError("Matrix has to be a Sequence[Sequence[int]]")
@@ -48,7 +48,7 @@ class Matrix():  # 2d matrix
         """
         if not len(self.matrix[0]) == len(other.matrix):
             raise ValueError("X of first matrix needs to equal Y of second matrix.")
-        elif not Other.RaisesError("int(Matrix.matrix[0][0])", GlobalVars={"Matrix": other})[0]:
+        elif not Other.RaisesError("float(Matrix.matrix[0][0])", GlobalVars={"Matrix": other})[0]:
             raise ValueError("Can only multiply a matrix by a matrix rn.")
 
         MatrixValues = [[0] * len(other.matrix[0])] * len(self.matrix)
@@ -57,7 +57,7 @@ class Matrix():  # 2d matrix
             values = [0] * len(other.matrix[0])
             for idx, b in enumerate(i):
                 for idx2, k in enumerate(other.matrix[idx]):
-                    values[idx2] += int(b) * int(k)
+                    values[idx2] += b * k
             MatrixValues[index] = values
 
         return (Matrix(MatrixValues))
